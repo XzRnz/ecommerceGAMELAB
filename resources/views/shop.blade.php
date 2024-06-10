@@ -527,7 +527,7 @@
     </div>
     @endforeach
 </div>
-{{$products->links()}}
+{{$products->links("pagination.default")}}
 
                         <div>
                             <div class="product-box">
