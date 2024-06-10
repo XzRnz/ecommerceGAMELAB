@@ -177,7 +177,7 @@
                                                 </div>
                                             </li>
                                             <li><a href="{{route('app.index')}}" class="nav-link menu-title">Home</a></li>
-                                            <li><a href="shop.html" class="nav-link menu-title">Shop</a></li>
+                                            <li><a href="{{route('shop.index')}}" class="nav-link menu-title">Shop</a></li>
 
 
                                             <li><a href="cart.html" class="nav-link menu-title">Cart</a></li>
