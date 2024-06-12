@@ -14,6 +14,9 @@ Route::get('/shop',[ShopController::class,'index'])->name('shop.index');
 Route::get('/product/{slug}',[ShopController::class,'productDetails'])->name('shop.product.details');
 Route::get('/cart','App\Http\Controllers\CartController@index')->name('cart.index');
 Route::post('/cart/store', 'App\Http\Controllers\CartController@addToCart')->name('cart.store');
+Route::put('/cart/update', 'App\Http\Controllers\CartController@updateCart')->name('cart.update');
+
+
 Auth::routes();
 
 Route::middleware('auth')->group(function(){
