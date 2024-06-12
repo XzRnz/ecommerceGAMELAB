@@ -198,12 +198,12 @@
                                     </li>
                                     <li class="onhover-dropdown wislist-dropdown">
                                         <div class="cart-media">
-                                            <a href="wishlist/list.html">
-                                                <i data-feather="heart"></i>
-                                                <span id="wishlist-count" class="label label-theme rounded-pill">
-                                                    0
-                                                </span>
-                                            </a>
+                                              <a href="{{route('cart.index')}}">
+                                                <i data-feather="shopping-cart"></i>
+                                                   <span id="cart-count" class="label label-theme rounded-pill">
+                                                     {{Cart::instance('cart')->content()->count()}}
+                                                   </span>
+                                             </a>
                                         </div>
                                     </li>
                                     <li class="onhover-dropdown wislist-dropdown">

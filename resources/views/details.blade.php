@@ -198,11 +198,15 @@
                                         <i class="fa fa-bookmark fz-16 me-2"></i>
                                         <span>Wishlist</span>
                                     </a>
-                                    <a href="javascript:void(0)"  id="cartEffect" class="btn btn-solid hover-solid btn-animation">
-                                        <i class="fa fa-shopping-cart"></i>
-                                        <span>Add To Cart</span>                                       
-                                    </a>
-
+                                    <a href="javascript:void(0)"  onclick="event.preventDefault();document.getElementById('addtocart').submit();" id="cartEffect" class="btn btn-solid hover-solid btn-animation">
+    <i class="fa fa-shopping-cart"></i>
+    <span>Add To Cart</span>
+    <form id="addtocart" method="post" action="{{route('cart.store')}}">
+        @csrf
+        <input type="hidden" name="id" value="{{$product->id}}">                                             
+        <input type="hidden" name="quantity" id="qty" value="1">
+    </form>
+</a>
 
 
                                 </div>
