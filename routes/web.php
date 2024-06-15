@@ -17,6 +17,7 @@ Route::post('/cart/store', 'App\Http\Controllers\CartController@addToCart')->nam
 Route::put('/cart/update', 'App\Http\Controllers\CartController@updateCart')->name('cart.update');
 Route::delete('/cart/remove', 'App\Http\Controllers\CartController@removeItem')->name('cart.remove');
 Route::delete('/cart/clear', 'App\Http\Controllers\CartController@clearCart')->name('cart.clear');
+Route::get('/wishlist',[WishlistController::class,'getWishlistedProducts'])->name('wishlist.list');
 
 
 
